@@ -1,0 +1,180 @@
+#Calculate age of user
+birth_year = input("Enter your birth ye: ")
+age = 2025 - int(birth_year)
+print("Your age is " + str(age))
+
+#Calculator Project
+First = input('First number: ')
+Second = input('Second number: ')
+sum = float(First) + float(Second)
+print("Sum: " + str(sum))
+
+#Boolean Ouput
+course = ("Python for beginners")
+print("Python" in course)
+
+#How to get to 10 to the power of 3
+10 **3
+
+#Boolean operator True
+price = 21
+print(price > 10 or price < 20)
+#Boolean operator False
+price = 6
+print(not price > 5)
+
+#using if, elif, else - else never has a condition!!
+temperature = input("What is the temperature outside? ")
+if int(temperature) > 40:
+    print("its a hot day")
+    print("drink some water bro")
+elif int(temperature) > 30:
+    print("its an average day")
+else:  print("its a cool day")
+
+#2. elif or elif - keep in mind computer will read first "if' then second
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? " ))
+if height >= 120:
+    print(" Great! You are tall enough to enter!")
+    age = int(input("Enter your age: "))
+    if age <= 12:
+        print("Your ticket price £5")
+    elif age <= 18:
+        print("Your ticket price is £9")
+    else: print("Your ticket price is £12")
+
+#Coding a weight converter - improvement put float in weight so dont have to repeat
+Weight= input("What is your weight? ")
+metric= input("(K)g or (L)bs): ").upper()
+if metric == "K":
+    print(float(Weight)*2.20462)
+elif metric == "L":
+    print("Your weight in kilograms is " + str(float(Weight)*2.2046))
+else: print("invalid unit")
+
+#Prev version:
+Weight= input("What is your weight? ")
+metric= input("(K)g or (L)bs): ")
+if metric == "K" or metric == "k":
+    print(float(Weight)*2.20462)
+elif metric == "L" or "l":
+    print("Your weight in kilograms is " + str(float(Weight)*2.2046))
+else: print("invalid unit")
+
+# While Loops
+i=1
+while i<=1000:
+    print(i)
+    i=i+1
+
+#Tip Calculator
+print("Welcome to the tip calculator!")
+bill = float(input("What was your total bill? £"))
+tip = int(input("What percentage top would you like to give? 10, 15, 20 or 25? "))
+if tip in (10, 15, 20, 25):
+    share = int(input("How many people are you splitting the bill with? "))
+    final_amount = round((bill - ((tip / 100) * bill)) / share, 2)
+    print(f"Your final amount is £{final_amount}")
+else: print("INVALID TIP")
+
+#Modulo
+print("Welome to the odd/even calculator!")
+number = int(input("Enter first number: "))
+if number % 2 == 0:
+    print("This number is even")
+else: print("This number is odd")
+
+#nested ifs
+print("Welcome to Python Pizza Deliveries!")
+size=input("What size pizza would you like? S, M or L? ").upper()
+pepperoni = input("What would you like pepperoni? Y or N ").upper()
+extra_cheese = input("Would you like extra cheese? Y or N ").upper()
+bill = 0
+valid_order = True
+if size == "S":
+    bill += 15
+    if pepperoni == "Y":
+        bill += 2
+    if extra_cheese == "Y":
+        bill += 1
+elif size == "M":
+    bill += 20
+    if pepperoni == "Y":
+        bill += 2
+    if extra_cheese == "Y":
+        bill += 1
+elif size == "L":
+    bill += 25
+    if pepperoni == "Y":
+        bill += 3
+    if extra_cheese == "Y":
+        bill += 1
+else:
+    print("Invalid input")
+    valid_order = False
+
+if valid_order:
+    print(f"Your final amount is £{bill}")
+
+#game made via nested if statements
+print("Welcome To Treasure Island!")
+print("Your mission is to find the treasure")
+direction = input("You're at a cross road. Where do you want to go? ")
+if direction == "left":
+    print ("You've come to a lake. There is an island in the middle of the lake")
+    move= input("Type 'wait' to wait for a boat. Type 'swim' to swim across. ")
+    if move == "wait":
+        print("You arrive at the island unharmed. There is a house with 3 doors.")
+        print("One red, one yellow and one blue.")
+        colour_door = input("Which door do you choose? ")
+        if colour_door == "blue":
+            print("Eaten by beasts. Game over.")
+        elif colour_door == "yellow":
+            print("You win!")
+        elif colour_door == "red":
+            print("Burned by fire. Game over.")
+    else: print("Attacked by a Trout. Game  over")
+else: print("Game over")
+
+#How to import date from diff module
+#import main.py
+print (main.direction)
+
+#Random 1
+import random
+random_integer = random.randint(1,10)
+#random module is first bit (part that contains all code
+#randint is name of function - code hints ask for a and b integers
+print(random_integer)
+
+#Random 2
+import random
+random_number_0_to_1 = random.random()
+print(random_number_0_to_1 )
+# parentheses used to activate it
+
+#Random 3
+import random
+random_int = random.randint(1,2)
+if random_int == 1:
+    print("Head")
+else: print("Tails")
+
+#Random 4 - this is bc in the square bracket a random integer is returned
+who = friends[random.randint(0,4)]
+print(who)
+#same thing:
+friends = ["Alice", "Bob", "Ella", "Leon", "Tom"]
+who = random.choices(friends)
+print(who)
+
+#nested list eg
+#first [] index chooses which list ie list 0 (fruits) or list 1 (vegetables)
+#next [] determines where in the list
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen[0][5])
