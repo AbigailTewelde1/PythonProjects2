@@ -1,0 +1,144 @@
+import random
+random_num = random.randint(0,2)
+
+print("Welcome to the python rock paper scissors game!")
+number = input("Type 0 for rock, 1 for paper and 2 for scissors: ")
+if number == "0":
+    print("""
+       _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    """)
+    random_num
+    if random_num == 0:
+        print("Your Computer chose...")
+        print("""
+            _______
+        ---'   ____)
+              (_____)
+              (_____)
+              (____)
+        ---.__(___)
+        """)
+        print("Try again!")
+    elif random_num == 1:
+        print("Your computer chose:")
+        print("""
+             _______
+        ---'    ____)____
+                   ______)
+                  _______)
+                 _______)
+        ---.__________)
+        """)
+        print("Game over")
+    else:
+        print("Your Computer chose: ")
+        print("""
+            _______
+        ---'   ____)____
+                  ______)
+               __________)
+              (____)
+        ---.__(___)
+        """)
+        print("YOU WIN!!")
+
+elif number == "1":
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+    random_num
+    if random_num == 0:
+        print("Your Computer chose...")
+        print("""
+            _______
+        ---'   ____)
+              (_____)
+              (_____)
+              (____)
+        ---.__(___)
+        """)
+        print("YOU WIN!!")
+    elif random_num == 1:
+        print("Your Computer chose...")
+        print("""
+               _______
+          ---'    ____)____
+                     ______)
+                    _______)
+                   _______)
+          ---.__________)
+          """)
+        print("You draw.. Try again")
+    else:
+        print("Your Computer chose:")
+        print("""
+               _______
+           ---'   ____)____
+                     ______)
+                  __________)
+                 (____)
+           ---.__(___)
+           """)
+        print("Game Over.")
+
+elif number == "2":
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+    random_num
+    if random_num == 0:
+     print("Your Computer chose:")
+     print("""
+         _______
+     ---'   ____)
+           (_____)
+           (_____)
+           (____)
+     ---.__(___)
+     """)
+     print("Game over")
+    elif random_num == 1:
+        print("Your Computer chose:")
+        print("""
+             _______
+        ---'    ____)____
+                   ______)
+                  _______)
+                 _______)
+        ---.__________)
+        """)
+        print("YOU WIN!!")
+    else:
+        print("Your Computer chose:")
+        print("""
+            _______
+        ---'   ____)____
+                  ______)
+               __________)
+              (____)
+        ---.__(___)
+        """)
+        print("You Draw. Try Again")
+else: print("INVALID INPUT")
+
+
+
+
+
+
+    #print the hand then print random what the computer chose -> nest if inside if 1 and som
